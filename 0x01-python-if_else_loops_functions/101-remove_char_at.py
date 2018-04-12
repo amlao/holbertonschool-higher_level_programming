@@ -2,6 +2,6 @@
 def remove_char_at(str, n):
     spot = ''
     for i in range(len(str)):
-        if i != n:
+        if (i != n):
             spot += str[i]
-    return copy
+    return spot
