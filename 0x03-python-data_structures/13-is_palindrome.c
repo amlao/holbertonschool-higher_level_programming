@@ -27,13 +27,15 @@ int is_palindrome(listint_t **head)
                 counter++;
                 tmp = tmp->next;
         }
-        for (counter = 0; counter < len / 2; counter++)
+        for (counter = 0; counter < len / 2;)
         {
-                if (new[counter] != new[len - 1 -counter])
+                if (new[counter] != new[len--])
                 {
                         free(new);
                         return (0);
                 }
+                len--;
+                counter++;
         }
         free(new);
         return (1);
