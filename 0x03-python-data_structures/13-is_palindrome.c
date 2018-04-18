@@ -14,13 +14,15 @@ int is_palindrome(listint_t **head)
         int *new;
         listint_t *tmp;
 
-        if (!head)
+        if (!head || !*head)
                 return (1);
         tmp = *head;
         for (; tmp; len++)
                 tmp = tmp->next;
         tmp = *head;
         new = malloc(sizeof(int) * len);
+        if (!new)
+                return (0);
         while (tmp)
         {
                 new[counter] = tmp->n;
