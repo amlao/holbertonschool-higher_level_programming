@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+"""
+A function that prints "My name is __ __"
+"""
+
+
+def say_my_name(first_name, last_name=""):
+    """ Prints first name and last name else TypeError """

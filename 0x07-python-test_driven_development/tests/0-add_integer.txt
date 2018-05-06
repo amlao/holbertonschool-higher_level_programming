@@ -1,0 +1,33 @@
+>>> add_integer = __import__("0-add_integer").add_integer
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(-1, 2)
+1
+
+>>> add_integer()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer('ten', 10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 4, in add_integer
+TypeError: a must be an integer
+
+>>> add_integer(10, 2.134)
+12
+
+>>> add_integer(.1)
+98
+
+>>> add_integer(10, "t")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 6, in add_integer
+TypeError: b must be an integer
+
+>>> add_integer(-23)
+75
