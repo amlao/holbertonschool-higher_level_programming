@@ -3,6 +3,7 @@
 Number of instances module
 """
 
+
 class Rectangle:
     """ rectangle class """
     number_of_instances = 0

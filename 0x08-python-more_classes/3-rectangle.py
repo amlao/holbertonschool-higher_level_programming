@@ -3,6 +3,7 @@
 String representation module
 """
 
+
 class Rectangle:
     """ rectangle class """
 

@@ -3,6 +3,7 @@
 Detect instance deletion module
 """
 
+
 class Rectangle:
     """ rectangle class """
 

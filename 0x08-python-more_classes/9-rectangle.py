@@ -3,6 +3,7 @@
 Square rectangle module
 """
 
+
 class Rectangle:
     """ rectangle class """
     number_of_instances = 0
@@ -58,7 +59,12 @@ class Rectangle:
         """ string representation of the rectangle in "#" """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "".join((str(self.print_symbol) * self.__width + "\n") * self.__height)
+        return "".join(
+            (str(
+                self.print_symbol) *
+                self.__width +
+                "\n") *
+            self.__height)
 
     def __repr__(self):
         """ string representation of the rectangle """
