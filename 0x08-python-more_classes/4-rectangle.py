@@ -20,7 +20,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """ width setter """
-        if not instance(value, int):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -46,17 +46,17 @@ class Rectangle:
 
     def perimeter(self):
         """ perimeter of the rectangle """
-        if self.__width > 0 or self.__height > 0:
-            return 2 * self.__width + 2 * self.__height
-        else:
+        if self.__width == 0 or self.__height == 0:
             return 0
+        return 2 * self.__width + 2 * self.__height
 
     def __str__(self):
         """ string representation of the rectangle in "#" """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "".join(("#" * self.__width + "\n") * self.__height)
-
+        j = "".join(("#" * self.__width + "\n") * self.__height)
+        return j[:-1]
+    
     def __repr__(self):
         """ string representation of the rectangle """
         return("Rectangle({:d}, {:d})".format(self.__width, self.__height))
