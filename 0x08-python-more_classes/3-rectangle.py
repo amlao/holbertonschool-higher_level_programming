@@ -54,4 +54,5 @@ class Rectangle:
         """ string representation of the rectangle in "#" """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "".join(("#" * self.__width + "\n") * self.__height)
+        j = "".join(("#" * self.__width + "\n") * self.__height)
+        return j[:-1]
