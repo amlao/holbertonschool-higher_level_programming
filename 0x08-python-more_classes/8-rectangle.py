@@ -4,12 +4,6 @@ Compare rectangles module
 """
 
 
-#!/usr/bin/python3
-"""
-Change representation module
-"""
-
-
 class Rectangle:
     """ rectangle class """
     number_of_instances = 0
