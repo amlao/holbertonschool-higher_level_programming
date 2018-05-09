@@ -14,7 +14,6 @@ class Rectangle:
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
-        Rectangle.print_symbol = "#"
 
     @property
     def width(self):
@@ -50,25 +49,25 @@ class Rectangle:
 
     def perimeter(self):
         """ perimeter of the rectangle """
-        if self.__width > 0 or self.__height > 0:
-            return 2 * self.__width + 2 * self.__height
-        else:
+        if self.__width == 0 or self.__height == 0:
             return 0
+        return 2 * self.__width + 2 * self.__height
 
     def __str__(self):
         """ string representation of the rectangle in "#" """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "".join(
+        j = "".join(
             (str(
                 self.print_symbol) *
                 self.__width +
                 "\n") *
             self.__height)
+        return j[:-1]
 
     def __repr__(self):
         """ string representation of the rectangle """
-        return("Rectangle({:d}, {:d})".format(self.__width, self.__height))
+        return("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
         """ deletes instance of rectangle """
