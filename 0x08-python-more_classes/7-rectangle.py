@@ -7,7 +7,7 @@ Change representation module
 class Rectangle:
     """ rectangle class """
     number_of_instances = 0
-    print_symbol = "*"
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ init """
@@ -64,7 +64,7 @@ class Rectangle:
                 "\n") *
             self.__height)
         return j[:-1]
-
+    
     def __repr__(self):
         """ string representation of the rectangle """
         return("Rectangle({}, {})".format(self.__width, self.__height))
