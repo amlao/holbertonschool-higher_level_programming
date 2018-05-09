@@ -31,3 +31,6 @@ TypeError: b must be an integer
 
 >>> add_integer(-23)
 75
+
+>>> add_integer(5)
+103
