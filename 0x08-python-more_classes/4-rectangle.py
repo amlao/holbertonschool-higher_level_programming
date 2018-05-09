@@ -56,7 +56,7 @@ class Rectangle:
             return ""
         j = "".join(("#" * self.__width + "\n") * self.__height)
         return j[:-1]
-    
+
     def __repr__(self):
         """ string representation of the rectangle """
         return("Rectangle({:d}, {:d})".format(self.__width, self.__height))
