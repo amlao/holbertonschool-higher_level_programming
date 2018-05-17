@@ -18,6 +18,8 @@ Test for empty
 >>> empty = MyList()
 >>> print(empty)
 []
+>>> empty.print_sorted()
+[]
 
 Test for negative
 >>> neg_list = MyList()
