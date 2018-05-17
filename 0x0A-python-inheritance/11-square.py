@@ -5,6 +5,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
     """ class Square """
+
     def __init__(self, size):
         self.integer_validator("size", size)
         self.__size = size
@@ -15,5 +16,5 @@ class Square(Rectangle):
         return super().area()
 
     def __str__(self):
-       """ str """
+        """ str """
         return '[Square] {:d}/{:d}'.format(self.__size, self.__size)
