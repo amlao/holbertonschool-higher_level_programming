@@ -12,7 +12,10 @@ class Student:
             return self.__dict__
         else:
             for i in attrs:
-                new = {}
-                if hasattr(self, i):
-                    new[i] = getattr(self, i)
+                try:
+                    new = {}
+                    if hasattr(self, i):
+                        new[i] = getattr(self, i)
+                except:
+                    pass
             return new
