@@ -14,8 +14,7 @@ class Student:
             for i in attrs:
                 try:
                     new = {}
-                    if hasattr(self, i):
-                        new[i] = getattr(self, i)
+                    new[i] = self.__dict__[i]
                 except:
                     pass
             return new
