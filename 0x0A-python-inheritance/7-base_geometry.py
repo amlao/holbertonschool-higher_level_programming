@@ -4,7 +4,14 @@ A class Base Geometry
 """
 
 
+if __name__ == '__main__':
+    import doctest
+    doctest.testfile('./tests/7-base_geometry.txt')
+
+
 class BaseGeometry():
+    def __init__(self):
+        """ init """
     def area(self):
         """ raises an Exception with the message area() is not implemented """
         raise Exception("area() is not implemented")
