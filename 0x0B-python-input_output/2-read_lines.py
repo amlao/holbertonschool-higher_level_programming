@@ -4,4 +4,4 @@ def read_lines(filename="", nb_lines=0):
         for line in file:
             if nb_lines <= 0:
                 break
-            print(f.readline(), end="")
+            print(file.readline(), end="")
