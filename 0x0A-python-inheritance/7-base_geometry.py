@@ -1,12 +1,9 @@
-#!/usr/bin/python3
 """
 A class Base Geometry
 """
 
 
 class BaseGeometry():
-    def __init__(self):
-        """ init """
     def area(self):
         """ raises an Exception with the message area() is not implemented """
         raise Exception("area() is not implemented")
