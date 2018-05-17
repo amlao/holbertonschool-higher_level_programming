@@ -8,14 +8,15 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        if attrs is None:
+        if not attrs:
             return self.__dict__
-        for i in attrs:
-            new = {}
-            if hasattr(self, i):
-                new[i] = getattr(self, i)
-        return new
+        else:
+            for i in attrs:
+                new = {}
+                if hasattr(self, i):
+                    new[i] = getattr(self, i)
+            return new
 
     def reload_from_json(self, json):
         for key, value in json.items():
-            selfattr(self, key, value)
+            setattr(self, key, value)
