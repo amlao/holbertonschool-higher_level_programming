@@ -10,5 +10,7 @@ class Student:
         if attrs is None:
             return self.__dict__
         for i in attrs:
-            new = []
-            """ WIP """
+            new = {}
+            if hasattr(self, i):
+                new[i] = getattr(self, i)
+        return new
