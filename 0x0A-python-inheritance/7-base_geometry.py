@@ -4,11 +4,6 @@ A class Base Geometry
 """
 
 
-if __name__ == '__main__':
-    import doctest
-    doctest.testfile('./tests/7-base_geometry.txt')
-
-
 class BaseGeometry():
     def __init__(self):
         """ init """
