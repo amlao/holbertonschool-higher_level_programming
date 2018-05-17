@@ -10,6 +10,6 @@ try:
     test = load_from_json("add_item.json")
 except:
     test = []
-    for args in argv[1:]:
-        test.append(args)
-        save_to_json(test, "add_item.json")
+for args in argv[1:]:
+    test.append(args)
+save_to_json(test, "add_item.json")
