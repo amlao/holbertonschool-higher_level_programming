@@ -50,7 +50,8 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
-        self.__x = value
+        else:
+            self.__x = value
 
     @property
     def y(self):
@@ -62,20 +63,21 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        self.__y = value
+        else:
+            self.__y = value
 
     def area(self):
         """ returns the area of rectangle """
-        return self.__height * self.__width
+        return self.height * self.width
 
     def display(self):
         """ prints a rectangle """
-        for i in range(self.__y):
+        for i in range(self.y):
             print()
         for i in range(self.__height):
-            for j in range(self.__x):
+            for j in range(self.x):
                 print(" ", end="")
-            print("#" * self.__width)
+            print("#" * self.width)
 
     def __str__(self):
         """ returns string of the rectangle """
@@ -98,8 +100,9 @@ class Rectangle(Base):
                     self.x = arg
                 elif count == 5:
                     self.y = arg
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """ returns the dictionary representation of the rectangle """

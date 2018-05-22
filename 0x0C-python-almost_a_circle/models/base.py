@@ -23,7 +23,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """ returns the json representation of the list_dictionary """
         if list_dictionaries == None or len(list_dictionaries) == 0:
-            return "[]"
+            return []
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -32,14 +32,14 @@ class Base:
         new_list = []
         if list_objs != None:
             for i in list_objs:
-                newlist = i.to_dictionary()
+                new_list.append(i.to_dictionary())
         with open("{}.json".format(cls.__name__), "w") as fil:
             fil.write(cls.to_json_string(new_list))
 
     @staticmethod
-    def to_json_string(json_string):
+    def from_json_string(json_string):
         """ returns the json represention of json_string """
-        if json_string == None or len(json_string) == 0:
+        if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 
@@ -56,6 +56,9 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ returns a list of instances """
-        with open("{}.json".format(cls.__name__), "r") as fil:
-            for i in cls.from_json_string(fil.read()):
-                return cls.create(**i)
+        try:
+            with open("{}.json".format(cls.__name__), "r") as fil:
+                l = cls.from_json_string(fil.read())
+            return (cls.create(**i) for i in l)
+        except FileNotFoundError:
+            return []
