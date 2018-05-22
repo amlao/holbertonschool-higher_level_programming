@@ -17,14 +17,10 @@ class Rectangle(Base):
         self.y = y
 
     @property
-    """ width property """
-
     def width(self):
         return self.__width
 
     @width.setter
-    """ width setter """
-
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -33,14 +29,10 @@ class Rectangle(Base):
         self. __width = value
 
     @property
-    """ height property """
-
     def height(self):
         return self.__height
 
     @height.setter
-    """ height setter """
-
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -49,14 +41,10 @@ class Rectangle(Base):
         self.__height = value
 
     @property
-    """ x property """
-
     def x(self):
         return self.__x
 
     @x.setter
-    """ x setter """
-
     def x(self, value):
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
@@ -66,14 +54,10 @@ class Rectangle(Base):
             self.__x = value
 
     @property
-    """ y property """
-
     def y(self):
         return self.__y
 
     @y.setter
-    """ y setter """
-
     def y(self, value):
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
@@ -103,7 +87,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """ assigns arguments to the attributes """
         count = 0
-        if args is not None and len(args) != 0:
+        if args != None and len(args) != 0:
             for arg in args:
                 count += 1
                 if count == 1:
