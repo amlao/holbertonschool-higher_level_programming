@@ -5,8 +5,10 @@ import io
 import sys
 from models.rectangle import Rectangle
 
+
 class TestRectangle(unittest.TestCase):
     """ class TestRectangle """
+
     def test_json_string(self):
         t = Rectangle(3, 3, 3, 3, 3)
         t2 = [f.to_dictionary()]
@@ -20,6 +22,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(t1.x, 3)
         self.assertEqual(t1.y, 4)
         self.assertEqual(t1.id, 5)
+
 
 if __name__ == "__main__":
     unittest.main()

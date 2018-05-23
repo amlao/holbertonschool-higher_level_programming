@@ -29,5 +29,6 @@ class TestBase(unittest.TestCase):
         with open("Rectangle.json", "r") as fil:
             self.assertEqual([], json.load(fil))
 
+
 if __name__ == "__main__":
     unittest.main()
