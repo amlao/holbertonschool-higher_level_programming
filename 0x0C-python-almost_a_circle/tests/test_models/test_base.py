@@ -10,7 +10,7 @@ class TestBase(unittest.TestCase):
     """unittest for Base"""
 
     def test_doc(self):
-        self.assetIsNotNone(Base.__doc__)
+        self.assertIsNotNone(Base.__doc__)
 
     def test_init_id_val(self):
         t = Base(25)
@@ -19,15 +19,6 @@ class TestBase(unittest.TestCase):
     def test_empty(self):
         t = Base()
         self.assertEqual(t.id, 1)
-
-    def test_emp(self):
-        t = Base.to_json_string([])
-        self.assertEqual(dic, "[]")
-
-    def test_json_empty(self):
-        Rectangle.save_to_file(None)
-        with open("Rectangle.json", "r") as fil:
-            self.assertEqual([], json.load(fil))
 
 
 if __name__ == "__main__":

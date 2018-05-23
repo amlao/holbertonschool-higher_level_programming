@@ -15,7 +15,7 @@ class TestSquare(unittest.TestCase):
     def test_square_update(self):
         u = Square(10)
         u.update(20)
-        self.assertEqual(f.id, 20)
+        self.assertEqual(u.id, 20)
 
 
 if __name__ == "__main__":
