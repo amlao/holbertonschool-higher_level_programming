@@ -17,4 +17,4 @@ if __name__ == "__main__":
     sus = session()
 
     for e in sus.query(City).order_by(City.id).all():
-        print("{}: ({}) {}".format(city.state_id, city.id, city.name))
+        print("{}: ({}) {}".format(e.state_id, e.id, e.name))
