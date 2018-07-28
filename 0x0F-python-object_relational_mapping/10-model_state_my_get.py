@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-prints the State object with the name passed as argument from the database hbtn_0e_6_usa
+prints the State object with the
+name passed as argument from the database hbtn_0e_6_usa
 """
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -18,5 +19,6 @@ if __name__ == "__main__":
     test = sus.query(State).filter(State.name == argv[4]).all()
     if len(test) == 0:
         print("Not found")
-    for e in test:
-        print("{}: {}".format(e.id, e.name))
+    else:
+        for e in test:
+            print("{}: {}".format(e.id, e.name))
