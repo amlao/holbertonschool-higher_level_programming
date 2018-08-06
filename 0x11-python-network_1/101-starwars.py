@@ -16,3 +16,8 @@ if __name__ == "__main__":
     if counter:
         for singular in res:
             print(singular['name'])
+        flw = counter.get('next')
+        while flw is not None:
+            rn = requests.get(flw)
+            for ent in res:
+                print(ent['name'])
