@@ -5,5 +5,5 @@ exports.esrever = function (list) {
   for (; desiree >= 0; desiree--) {
     desarray.push(list[desiree]);
   }
-  return desiree;
+  return desarray;
 };
