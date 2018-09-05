@@ -10,7 +10,7 @@ request(url, function (error, response, text) {
       for (let bc in ml) {
         if (ml[bc].includes('18')) {
           counter += 1;
-	}
+        }
       }
     }
     console.log(counter);
